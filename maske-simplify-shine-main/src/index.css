@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors - Professional B2B Tech */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+    
+    /* Primary - Deep Black */
+    --primary: 0 0% 11%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Secondary - Neutral Gray */
+    --secondary: 0 0% 61%;
+    --secondary-foreground: 0 0% 11%;
+    
+    /* Muted - Light Gray Background */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    /* Accent - Medium Gray */
+    --accent: 0 0% 93%;
+    --accent-foreground: 0 0% 11%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 11%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Design Tokens */
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 96%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 11%) 0%, hsl(0 0% 20%) 100%);
+    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 11% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 11% / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 11%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 15%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 15%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 11%;
+    
+    --secondary: 0 0% 45%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 61%;
+    
+    --accent: 0 0% 24%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 0 0% 83%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .gradient-dark {
+    background: var(--gradient-dark);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
