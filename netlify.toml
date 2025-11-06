@@ -1,7 +1,7 @@
-﻿[build]
+[build]
   base = "maske-simplify-shine-main"
   command = "npm run build"
-  publish = "dist"   # troque para "build" se seu build sair em build/
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
